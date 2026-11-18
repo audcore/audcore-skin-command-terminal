@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="zh" data-skin="terminal">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Audcore Terminal</title>
+  <link rel="stylesheet" href="./terminal.css">
+  <link rel="stylesheet" href="./skin-menu.css">
+</head>
+<body>
+  <main id="terminal">
+    <header>
+      <div id="versions"></div>
+      <div id="audio"></div>
+      <div id="selection"></div>
+      <table>
+        <thead><tr><th scope="col" id="channel-col"></th><th scope="col" id="name-col"></th><th scope="col" id="gain-col"></th><th scope="col" id="state-col"></th><th scope="col" id="level-col"></th></tr></thead>
+        <tbody id="channels"></tbody>
+      </table>
+      <div id="hint"></div>
+    </header>
+    <pre id="output" role="log" aria-live="polite"></pre>
+    <div id="status" role="status"></div>
+    <form id="prompt" autocomplete="off">
+      <label for="command">audcore&gt;</label>
+      <input id="command" type="text" spellcheck="false" autocapitalize="off" maxlength="4096" autofocus>
+    </form>
+  </main>
+  <script type="module" src="./terminal-page.mjs"></script>
+</body>
+</html>

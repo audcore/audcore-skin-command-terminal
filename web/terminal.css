@@ -1,0 +1,99 @@
+:root {
+  color-scheme: dark;
+  --terminal-bg: #0c0c0c;
+  --terminal-fg: #ccc;
+  background: var(--terminal-bg);
+  color: var(--terminal-fg);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --terminal-bg: #f8f8f8;
+  --terminal-fg: #232323;
+}
+
+body { margin: 0; }
+
+#terminal {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: calc(100dvh / var(--scale, 1));
+  padding: 4px 8px;
+  overflow: hidden;
+  font: 14px/1.35 Consolas, "MS Gothic", "Microsoft YaHei Mono", monospace;
+  font-variant-numeric: tabular-nums;
+  zoom: var(--scale, 1);
+}
+
+header {
+  flex: 0 1 auto;
+  max-height: 65%;
+  overflow: auto;
+  scrollbar-width: none;
+}
+
+#audio, #selection, #hint, td, th {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+table {
+  border-collapse: collapse;
+  font: inherit;
+}
+
+th, td {
+  padding: 0 2ch 0 0;
+  text-align: left;
+  font-weight: normal;
+}
+
+td:nth-child(2) { max-width: 20ch; }
+td:nth-child(3), td:nth-child(4), td:nth-child(5) { white-space: pre; }
+
+td:first-child { white-space: pre; }
+
+#output {
+  flex: 1 1 0;
+  min-height: 0;
+  margin: 0;
+  overflow: hidden auto;
+  white-space: pre;
+  font: inherit;
+  scrollbar-width: none;
+}
+
+#status {
+  min-height: 1lh;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+#prompt {
+  display: flex;
+  flex: none;
+  gap: 1ch;
+  align-items: center;
+}
+
+#command {
+  appearance: none;
+  flex: 1;
+  min-width: 0;
+  height: 1lh;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: inherit;
+  caret-color: currentColor;
+  caret-shape: block;
+  font: inherit;
+}
+
+#command[data-composing] { caret-shape: bar; }

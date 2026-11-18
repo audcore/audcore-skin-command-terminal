@@ -1,0 +1,22 @@
+{
+  "id": "cn.audcore.terminal",
+  "name": "命令终端",
+  "names": { "zh": "命令终端", "en": "Terminal", "ja": "端末" },
+  "author": "Audcore",
+  "version": "0.1.5",
+  "api": { "major": 1, "minor": 0 },
+  "entry": "web/terminal.html",
+  "preview": "web/terminal-preview.png",
+  "window": {
+    "default": [720, 480],
+    "min": [320, 160],
+    "max": null,
+    "resizable": true,
+    "maximizable": true,
+    "forceNativeFrame": true,
+    "showVersions": true
+  },
+  "themes": ["dark", "light"],
+  "scale": { "min": 0.75, "max": 2, "default": 1 },
+  "languages": ["zh", "en", "ja"]
+}

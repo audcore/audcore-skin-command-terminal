@@ -1,0 +1,76 @@
+{
+  "id": "cn.audcore.terminal",
+  "name": "命令终端",
+  "names": {
+    "zh": "命令终端",
+    "en": "Terminal",
+    "ja": "端末"
+  },
+  "author": "Audcore",
+  "version": "0.1.5",
+  "api": {
+    "major": 1,
+    "minor": 0
+  },
+  "entry": "web/terminal.html",
+  "preview": "web/terminal-preview.png",
+  "window": {
+    "default": [
+      720,
+      480
+    ],
+    "min": [
+      320,
+      160
+    ],
+    "max": null,
+    "resizable": true,
+    "maximizable": true,
+    "forceNativeFrame": true,
+    "showVersions": true
+  },
+  "themes": [
+    "dark",
+    "light"
+  ],
+  "scale": {
+    "min": 0.75,
+    "max": 2,
+    "default": 1
+  },
+  "languages": [
+    "zh",
+    "en",
+    "ja"
+  ],
+  "kind": "web",
+  "license": "MIT",
+  "repository": "https://github.com/audcore/audcore-skin-terminal",
+  "description": "命令终端，声核独立网页皮肤",
+  "build": {
+    "schema": 1,
+    "recipe": "web-static",
+    "platform": "windows-x86_64",
+    "toolchain": {
+      "tools": {
+        "node": "24.12.0"
+      }
+    },
+    "files": [
+      "LICENSE",
+      "web/i18n-cache.mjs",
+      "web/meters.mjs",
+      "web/send-label.mjs",
+      "web/skin-menu.css",
+      "web/skin.mjs",
+      "web/startup.mjs",
+      "web/terminal-commands.mjs",
+      "web/terminal-manifest.json",
+      "web/terminal-page.mjs",
+      "web/terminal-preview.png",
+      "web/terminal.css",
+      "web/terminal.html",
+      "web/webview-bridge.mjs"
+    ]
+  }
+}
