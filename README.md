@@ -32,7 +32,8 @@
 ```sh
 git clone https://github.com/audcore/audcore-skin-command-terminal.git
 cd audcore-skin-command-terminal
-node --test tools/build-package.test.mjs web/terminal.test.mjs
+node --test tools/build-package.test.mjs
+node --test web/terminal.test.mjs
 node tools/build-package.mjs . dist
 ```
 
