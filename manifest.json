@@ -45,8 +45,8 @@
   ],
   "kind": "web",
   "license": "MIT",
-  "repository": "https://github.com/audcore/audcore-skin-terminal",
-  "description": "命令终端，声核独立网页皮肤",
+  "repository": "https://github.com/audcore/audcore-skin-command-terminal",
+  "description": "通过命令选择通道、调整音量、切换静音和操作效果器，同时查看实时通道列表。",
   "build": {
     "schema": 1,
     "recipe": "web-static",
